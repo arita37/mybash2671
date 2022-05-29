@@ -1,4 +1,4 @@
-name: utilmy
+name: test01
 
 ###  https://github.com/arita37/awesome-actions#static-analysis
 
@@ -10,8 +10,8 @@ on:
     branches:
     - main
 
-  schedule:
-    - cron:  '*/5 * * * *'      #### 60mins
+ # schedule:
+ #   - cron:  '*/5 * * * *'      #### 60mins
 
 
 
@@ -34,10 +34,13 @@ jobs:
     - name: Install pipenv
       uses: dschep/install-pipenv-action@v1
       
-  
-    - name: Install utilmy
+    - name: Run tests
       run:  |
-        pip install utilmy
+          ls .
+  
+    #- name: Install utilmy
+    #  run:  |
+    #    pip install utilmy
 
 
 
