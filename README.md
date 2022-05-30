@@ -1,30 +1,42 @@
 
+#### Install
+```
+cd $HOME
+git clone  https://github.com/arita37/mybash2671.git  mybash
+cd mybash
+git checkout zdev
+
+
+#### Add the scripts path to you PATH
+echo  'export PATH="$HOME/mybash/vmain/src:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+
+#### test
+mybash
+
+
+```
+
+
+
 
 #### Structure
 ```
 
 vmain/  : main version
-v2/:  another vesrion in case of 
-
-
-path =  vmain/src/    ### we can put some stuff  OUTSIDE of the src folder
+v2/:     another vesrion in case of 
 
 
 
-```
+vmain/src/  :  List of bash script with sub-folders
+
+  ddocker  :
+  aaws     : AWS related
+
+  ...  
 
 
 
-
-#### Install
-```
-git clone 
-
-cd 
-
-git checkout zdev
-
-echo  'export path="${pwd}/vmain/src"' >> ~/.bashrc
 
 
 
