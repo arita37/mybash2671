@@ -26,3 +26,5 @@ function total_time_in_ms {
   l_t=`total_time $l_start $l_end`
   echo $((l_t * 1000))
 }
+
+
