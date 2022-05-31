@@ -2,6 +2,8 @@
 # $1 : number 
 # add on prefiex
 
+#### Automatic git add, git commit, git push
+
 number=500
 
 if [ $2 ]; then
