@@ -1,0 +1,20 @@
+#!/bin/bash
+# Description: Report Top 10 processes are high CPU utilization
+# Usage: ./cpu_utilization
+# Example result
+# ---------------
+#   |%CPU   |       %MEM    |       PID     |       COMMAND
+#   |9.5    |       2.1     |       3631    |       savscand
+#   |8.3    |       1.0     |       11235   |       /snap/code/97/usr/share/code/code
+#   |7.9    |       0.8     |       11351   |       /snap/code/97/usr/share/code/code
+#   |7.8    |       0.9     |       11183   |       /snap/code/97/usr/share/code/code
+#   |3.9    |       0.1     |       3303    |       /usr/bin/pulseaudio
+#   |3.8    |       1.8     |       4269    |       /usr/lib/slack/slack
+#   |3.3    |       0.4     |       8871    |       /usr/lib/firefox/firefox
+#   |3.1    |       1.9     |       4521    |       /opt/google/chrome/chrome
+#   |2.9    |       1.9     |       3779    |       /usr/bin/gnome-shell
+
+LIMIT_RESULT=10
+
+rc=$(ps -eo pcpu,%mem,pid,args | sort -k 1 -r | head -${LIMIT_RESULT})
+echo "$rc" | awk -v OFS='\t''|''\t' '{print"|" $1,$2,$3,$4}'
