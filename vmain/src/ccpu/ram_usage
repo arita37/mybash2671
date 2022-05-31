@@ -1,6 +1,5 @@
 #!/bin/bash
 # Description: Report Top 10 processes are high Memory utilization
-# Usage: ./mem_utilization
 # Example result
 # =====================================================================================
 #   |%MEM   |       %CPU    |       PID     |       COMMAND
